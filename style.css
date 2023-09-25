@@ -12,14 +12,16 @@ html {
 
 body {
   background-color: #121626;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #D6AD60;
-  font-family: 'Lato', sans-serif;
 }
+
 section,
 footer,
 header {
   padding: 1rem;
 }
+
 section {
   scroll-margin-top: 60px;
 }
@@ -43,15 +45,15 @@ li {
   display: inline-block;
 }
 
-.btn {
+.modal {
   border: none;
   border-radius: 5px;
   box-shadow: none;
   padding: 0.5rem 1rem;
-  background-color: #F4EBD0;
+  background-color: rgb(163, 152, 131);
   font-family: inherit;
   font-size: inherit;
-  color: #0e0d0b;
+  color: white;
 }
 
 #backToTop {
@@ -68,9 +70,39 @@ li {
   border: none;
 }
 
+.overlayButton {
+  background-color: rgba(51, 51, 51, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlayButton.visible {
+  display: flex;
+}
+.modalBtn {
+  background-color: white;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+  max-width: 600px;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 @media (max-width: 500px) {
   body {
-    background-color: rgb(241, 196, 203);
+    background-color: pink;
   }
   nav ul {
     display: none;
@@ -84,12 +116,12 @@ li {
     right: 1rem;
   }
 
-  .btn {
+  .modalBtn {
     padding: 0.5rem;
   }
   ul.responsive {
     display: block;
-    background-color: rgb(247, 247, 247);
+    background-color: white;
     position: absolute;
     left: 0;
     top: 70px;
