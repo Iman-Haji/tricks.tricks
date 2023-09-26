@@ -8,7 +8,7 @@ const modalButton = document.querySelector('#modalButton');
 const overlayButton = document.querySelector('.overlayButton');
 const closeButton = document.querySelector('.closeButton');
 
-// browser onscroll event trigger
+// .   browser onscroll event trigger
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
